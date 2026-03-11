@@ -1,6 +1,8 @@
 # ALOHA Gamepad
 
-Untethered teleoperation for [Mobile ALOHA](https://mobile-aloha.github.io/) using a gamepad + inverse kinematics. Control both bimanual arms and mobile base with a standard wireless controller (PS4 DualShock). Includes data collection, [pi0.5](https://www.physicalintelligence.company/blog/pi05) fine-tuning, and inference pipelines.
+#### Project Website: https://shengfeng-yang.github.io/aloha-gamepad/
+
+Untethered teleoperation for [Mobile ALOHA](https://mobile-aloha.github.io/) using a gamepad + inverse kinematics. Control both bimanual arms and mobile base with a standard wireless controller (PS4). Includes data collection, [pi0.5](https://www.physicalintelligence.company/blog/pi05) fine-tuning, and inference pipelines.
 
 ## Overview
 
@@ -109,8 +111,8 @@ python scripts/eval_policy.py --checkpoint /path/to/pretrained_model --episodes 
 - Python 3.10+
 - numpy, torch, pyarrow, imageio[ffmpeg]
 - [LeRobot](https://github.com/huggingface/lerobot) (for pi0.5 fine-tuning and evaluation)
-- PS4 DualShock controller (connected via Bluetooth or USB)
+- PS4 controller (connected via Bluetooth or USB)
 
 ## Acknowledgments
 
-Built on top of [Mobile ALOHA](https://mobile-aloha.github.io/) by Tony Zhao et al. and [LeRobot](https://github.com/huggingface/lerobot) by Hugging Face.
+Built on top of [Mobile ALOHA](https://mobile-aloha.github.io/) by Tony Zhao et al., [ALOHA](https://github.com/Interbotix/aloha) by Interbotix, and [LeRobot](https://github.com/huggingface/lerobot) by Hugging Face.
