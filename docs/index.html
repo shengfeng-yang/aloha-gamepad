@@ -187,7 +187,7 @@
     <h2 class="title is-3">Abstract</h2>
     <div class="content has-text-justified">
       <p>
-        We present an open-source teleoperation system that uses a standard gamepad with inverse kinematics to control the full Mobile ALOHA platform&mdash;both bimanual arms and the mobile base. Unlike the standard leader-follower interface, which physically tethers the operator to the robot, our gamepad-IK approach decouples the operator, enabling them to walk close to the robot for visual precision and move freely around the workspace to find optimal viewing angles. We demonstrate this system on three laboratory manipulation tasks including precision pipette tip attachment, tube pick-and-place, and bimanual pipette tip release, showcasing the system's capability for both single-arm and coordinated bimanual control. Using 55 minutes of gamepad-collected demonstrations, we fine-tune &pi;0.5 and show that the resulting policy can correctly select the appropriate arm based on object position and successfully execute tube pickup, with robust visual tracking of object positions during execution. We release the complete teleoperation code, demonstration videos, and training dataset at the Project page: <a href="https://shengfeng-yang.github.io/aloha-gamepad/">https://shengfeng-yang.github.io/aloha-gamepad/</a>.
+        We present a leader-arm-free teleoperation system that uses a standard gamepad with inverse kinematics (IK) to control the full Mobile ALOHA platform&mdash;both bimanual arms and the mobile base. Unlike the standard leader-follower interface, which physically tethers the operator to the robot, our gamepad-IK approach decouples the operator, enabling them to walk close to the robot for visual precision and move freely around the workspace to find optimal viewing angles. We demonstrate this system on three laboratory manipulation tasks including precision pipette tip attachment, tube pick-and-place, and bimanual pipette tip release, showcasing the system's capability for both single-arm and coordinated bimanual control. Using 55 minutes of gamepad-collected demonstrations, we fine-tune the &pi;0.5 VLA and show that the resulting policy can correctly select the appropriate arm based on object position and successfully execute tube pickup, with robust visual tracking of object positions during execution. Code, videos, and dataset are available at: <a href="https://shengfeng-yang.github.io/aloha-gamepad/">https://shengfeng-yang.github.io/aloha-gamepad/</a>.
       </p>
     </div>
   </div>
@@ -305,6 +305,80 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TELEOPERATION VIDEOS ===== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Teleoperation Demonstrations</h2>
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <p class="has-text-centered has-text-weight-bold" style="margin-bottom: 0.5rem;">Tube Pick-and-Place</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+          <iframe src="https://www.youtube.com/embed/PrtnCdVjc-I"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="column is-6">
+        <p class="has-text-centered has-text-weight-bold" style="margin-bottom: 0.5rem;">Pipette Tip Pickup</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+          <iframe src="https://www.youtube.com/embed/ULQGZPoeffI"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="column is-6">
+        <p class="has-text-centered has-text-weight-bold" style="margin-bottom: 0.5rem;">Bimanual Pipette Tip Release</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+          <iframe src="https://www.youtube.com/embed/y9dJL1pWFKk"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUTONOMOUS POLICY VIDEOS ===== -->
+<section class="section" style="background: #fafbfc;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Autonomous Policy (π0.5) Demonstrations</h2>
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <p class="has-text-centered has-text-weight-bold" style="margin-bottom: 0.5rem;">Arm Selection (Right Arm)</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+          <iframe src="https://www.youtube.com/embed/3WGmYN2AhTk"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="column is-6">
+        <p class="has-text-centered has-text-weight-bold" style="margin-bottom: 0.5rem;">Distractor Robustness</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+          <iframe src="https://www.youtube.com/embed/vH--PPCoBTg"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="column is-6">
+        <p class="has-text-centered has-text-weight-bold" style="margin-bottom: 0.5rem;">Visual Tracking (Move Rack & Tube)</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+          <iframe src="https://www.youtube.com/embed/w8SR8rDLZ1E"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="column is-6">
+        <p class="has-text-centered has-text-weight-bold" style="margin-bottom: 0.5rem;">Visual Tracking (Move Rack Twice)</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+          <iframe src="https://www.youtube.com/embed/PSzYXPN0-Ts"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
